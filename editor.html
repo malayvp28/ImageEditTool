@@ -1,0 +1,294 @@
+
+ <html>
+ <head>
+	<title>Image Editing</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="http://use.fontawesome.com/releases/v5.5.0/css/all.css">
+		<script src= "https://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.4.0/fabric.min.js"> </script> 
+		<link href="https://www.fontspace.com/trash-fort-font-f43635" rel="stylesheet"></link>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bangers&family=Berkshire+Swash&family=Dancing+Script&family=Fondamento&family=Fredericka+the+Great&family=Galada&family=Grenze+Gotisch:wght@531;700&family=Merienda+One&family=Modak&family=Monoton&family=Montserrat+Subrayada&family=Pacifico&family=Piedra&family=Rye&family=Sedgwick+Ave+Display&family=Yellowtail&display=swap" rel="stylesheet">
+	<style>
+@font-face{
+ font-family:"doodle";
+ src:url("Trashfort-vmAX7.ttf");
+}
+
+
+	</style>
+ </head>
+ 
+ <body>
+ 	<nav class="navbar navbar-expand-lg navbar-light  fixed-top" style="background-color:rgb(40,40,40);color:white" >
+  <div class="container" style="height:26px;font-size:70%;">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto" style="font-size:50%;"> 
+        <li class="nav-item active">
+          <a class="nav-link" href="" style="font-size:70%;color:white">Home
+                <span class="sr-only" style="font-size:70%;">(current)</span>
+              </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="file:///C:/Users/Pruthvi/Desktop/home/crop/crop.html" style="font-size:70%;color:white">Crop Image</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="file:///C:/Users/Pruthvi/Desktop/home/compressor/comp_prc.html" style="font-size:70%;color:white">Compress Image</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="font-size:70%;color:rgb(100,100,100)">Edit Image</a>
+        </li>
+	
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class=" c">
+<div class=" c1">
+<ul>
+<li style="border-bottom:10px solid rgb(30,30,30);"><div class="f"><button onclick="home()" style="display:none" id="b1"></button><label for="b1"><i style="cursor:pointer;"class="fas fa-home " ></label></i>
+
+<div class="dropdown-content1">
+  <p >TOGGLE HOME</p>
+  </div>
+  </div>
+ </li>
+<li style="margin-top:400%; "><div class="f"><button onclick="uploadIm()" style="display:none" id="b2"></button><label for="b2"><i class="fas fa-upload" style="cursor:pointer;"></i></label>
+<div class="dropdown-content1">
+  <p >UPLOAD IMAGE</p>
+  </div></div></li>
+
+<li><div class="f"><button onclick="adjust()" style="display:none" id="b4"></button><label for="b4"><i style="cursor:pointer;" class="fas fa-adjust" ></i></label>
+<div class="dropdown-content3">
+  <img height="150px" width="300px" src="image/image.jpg">
+  <label>ADJUST</label>
+   <p Style="font-size:12px;">The Adjustment is a group of a super useful, non-destructive image editing tools that add color and tonal adjustments to your image without permanently changing its pixels.</p>
+ 
+  </div></div></li>
+<li><div class="f"><button onclick="effect()" style="display:none" id="b5"></button><label for="b5"><i  style="cursor:pointer;" class="fas fa-magic"></i></label>
+<div class="dropdown-content3">
+  <img height="150px" width="300px" src="image/image2.jpg">
+  <label>EFFECT</label>
+  <p Style="font-size:12px;">A variety of effects—such as shadows, glows, and bevels—that change the appearance of a layer's contents in a non-distructive way.</p>
+  </div></div></li>
+<li><div class="f"><button onclick="font()" style="display:none" id="b6"></button><label for="b6"><i style="cursor:pointer;"  class="fas fa-font"></i></label>
+<div class="dropdown-content4">
+  <img height="150px" width="300px" src="image/image3.png">
+  <label>FONT</label>
+  <p style="font-size:12px;">A font is a complete set of characters—letters, numbers, and symbols—that share a common weight, width, and style, such as 10‑pt Adobe Garamond Bold.</p>
+  </div></div></li>
+
+
+</ul>
+</div>
+<div class="c2" id="id" style="display:none;">
+</div>
+<div class="c2" id="idfont"style="display:none;">
+<button class="btn3" onclick="hidemenu1()" style="margin-left:90%;margin-top:2px;margin-bottom:4px;" ><i class="fas fa-times" ></i>
+</button>
+<img src="image/c.jpg" height="1%" width="100%" style="margin-left:0%;"></img>
+<div style="height:92%;overflow-y:scroll;">
+<button class="btn" style="width:100%;border-bottom:1px solid white;font-family:arial" ondblclick="f1()" id="b1" onclick="c1()" value="arial">Arial </button> </button>
+<button class="btn" style="width:100%;border-bottom:1px solid white;font-family:arial black" ondblclick="f2()" id="b2" onclick="c2()"value="arial black">Arial black</button> </button>
+<button class="btn" style="width:100%;border-bottom:1px solid white;font-family:sans">Sans-serif</button> </button>
+<button class="btn" style="width:100%;border-bottom:1px solid white;font-family:modak">Modak</button> </button>
+<button class="btn" style="width:100%;border-bottom:1px solid white;font-family:Grenze Gotisch">Grenze Gotisch</button> </button>
+<button class="btn" style="width:100%;border-bottom:1px solid white;font-family:Bangers">Bangers</button> </button>
+<button class="btn" style="width:100%;border-bottom:1px solid white;font-family:Fondamento">Fondamento</button> </button>
+<button class="btn" style="width:100%;border-bottom:1px solid white;font-family:Montserrat Subrayada">Montserrat subrayada</button> </button>
+<button class="btn" style="width:100%;border-bottom:1px solid white;font-family:doodle">Doodle</button> </button>
+<button class="btn" style="width:100%;border-bottom:1px solid white;font-family:Galada">Galada</button> </button>
+<button class="btn" style="width:100%;border-bottom:1px solid white;font-family:Yellowtail">Yellowtail</button> </button>
+<button class="btn" style="width:100%;border-bottom:1px solid white;font-family:Dancing Script">Dancing Script</button> </button>
+<button class="btn" style="width:100%;border-bottom:1px solid white;font-family:Pacifico">pacifico</button> </button>
+<button class="btn" style="width:100%;border-bottom:1px solid white;font-family:Abril Fatface">Abril Fatface</button> </button>
+<button class="btn" style="width:100%;border-bottom:1px solid white;font-family:Merienda One">Merienda one</button> </button>
+<button class="btn" style="width:100%;border-bottom:1px solid white;font-family:Monoton">Monoton</button> </button>
+<button class="btn" style="width:100%;border-bottom:1px solid white;font-family:Berkshire Swash">Berkshire swash</button> </button>
+<button class="btn" style="width:100%;border-bottom:1px solid white;font-family:Piedra">Piedra</button> </button>
+<button class="btn" style="width:100%;border-bottom:1px solid white;font-family:Fredericka the Great">Fredericka</button> </button>
+<button class="btn" style="width:100%;border-bottom:1px solid white;font-family:Rye">Rye</button> </button>
+<button class="btn" style="width:100%;border-bottom:1px solid white;font-family:Sedgwick Ave Display">Sedgwick</button> </button>
+</div>
+</div>
+<div class="c2" id="id1"style="display:none;">
+<button class="btn3" onclick="hidemenu()" style="margin-left:90%;margin-top:2px;margin-bottom:4px;" ><i class="fas fa-times" ></i>
+</button>
+<img src="image/c.jpg" height="1%" width="100%" style="margin-left:0%;"></img>
+<img src="image/c.jpg" height="20%" width="100%" style="margin-left:0%;"></img>
+<div><input type="file" style="display:none;"  id="upload-file" onchange="start_new_img()"><label for="upload-file" class=" btn" style="margin-left:17%;margin-top:30%;">
+<h6 style="font-family:snas;">NEW IMAGE</h6></label></input></div>
+<div class=" d-flex justify-content-center align-items-center ">
+<img src="image/img4.jpg" style="display:none" height="80%" width="100%" id="start_img"></img>
+</div>
+<div><button id="btn_new_img" style="display:none;" onclick="load()"></button><label  for="btn_new_img" class=" btn" style="margin-left:16%;margin-top:2%;">
+<h6 style="font-family:snas;font-size:70%;">LOAD IMAGE</h6></label></div>
+
+</div>
+<div class="c2" id="id2"style="display:none;">
+<button class="btn3" onclick="hidemenu()" style="margin-left:90%;margin-top:2px;margin-bottom:4px;" ><i class="fas fa-times" ></i>
+</button>
+<img src="image/c.jpg" height="1%" width="100%" style="margin-left:0%;"></img>
+<img src="image/c.jpg" height="20%" width="100%" style="margin-left:0%;"></img>
+<input type="url" placeholder="http://example.com/demo.jpg" style="margin-left:7%;margin-top:30%;width:70%;float:left;border:2px solid white;height:5%;border-radius:0%;background:rgb(180,180,180)"></input>
+<label class="btn" style="margin-top:30%;">GO</label><button class="btn" style="width:10%;">Go</button>
+<div><label  class=" btn" style="margin-left:17%;margin-top:2%;">
+<h6 style="font-family:snas;">LOAD IMAGE</h6></label></div>
+</div>
+<div class="c2" style="border-right:2px solid rgb(30,30,30);display:none;" id="id3">
+<button class="btn3" onclick="hidemenu()" style="margin-left:90%;margin-top:2px;margin-bottom:4px;" ><i class="fas fa-times" ></i>
+</button>
+<img src="image/c.jpg" height="1%" width="100%" style="margin-left:0%;"></img>
+<label class="effect_name" >ADJUST</label>
+<button class="btn" style="margin-left:22%;height:5%;width:60%;padding:0px 1px;margin-top:10%;font-size:18px;float:bottom" onclick="auto_adjust_tool()"><i class="fas fa-magic" style="margin-right:8%;"></i>Auto Fix</button>
+<img src="image/c.jpg" height="1%" width="100%" style="margin-left:0%;margin-top:5%"></img>
+<div>
+<label style="margin-left:5%;margin-top:15%;font-family: Open Sans;font-size:15px;color:white;">Brightness</label>
+<input type="range" min="-100" max="100" value="0" class="range blue" id="brightness" onchange="adjust_tool()"/>
+<label style="margin-left:5%;margin-top:10%;font-family: Open Sans;font-size:15px;color:white">Contrast</label>
+<input type="range" min="-100" max="100" value="0" class="range blue" id="contrast" onchange="adjust_tool()" />
+<label style="margin-left:5%;margin-top:10%;font-family: Open Sans;font-size:15px;color:white">Saturation</label>
+<input type="range" min="-100" max="100" value="0" class="range blue" onchange="adjust_tool()" id="saturation"/>
+<label style="margin-left:5%;margin-top:10%;font-family: Open Sans;font-size:15px;color:white">Vibrance</label>
+<input type="range" min="-100" max="100" value="0" class="range blue"onchange="adjust_tool()" id="vibrance"/>
+<label style="margin-left:5%;margin-top:10%;font-family: Open Sans;font-size:15px;color:white">Noise</label>
+<input type="range" min="0" max="100" value="0" class="range blue" onchange="adjust_tool()" id="noise"/>
+<label style="margin-left:5%;margin-top:10%;font-family: Open Sans;font-size:15px;color:white" >Sepia</label>
+<input type="range" min="0" max="100" value="0" class="range blue" onchange="adjust_tool()" id="sepia"/>
+</div>
+<button class="btn52" style="margin-left:20px;margin-top:20%;" onclick="revert()">CLOSE</button>
+<button class="btn51" onclick="save()">APPLY</button>
+</div>
+<div class=" c2"  id="id4" style="display:none;">
+
+<button class="btn3" onclick="hidemenu()" style="margin-left:90%;margin-top:2px;margin-bottom:4px;" ><i class="fas fa-times" ></i>
+</button>
+<img src="c.jpg" height="1%" width="100%" style="margin-left:0%;"></img>
+<label class="effect_name" style="float:left">EFFECT</label>
+<div class="btn2">
+
+<button class="btn_effect" style="float:left;margin-left:10px;margin-right:7px;margin-top:10px; border-bottom-left-radius: 0px;" onclick="none()"><img src="image/i0.jpg" height="100%" width="100%;" style=" border-bottom-left-radius: 35px;"></img><label style="color:white">Original</label></button>
+<button class="btn_effect" style="margin-top:10px;" onclick="lom()"><img src="image/i1.png" height="100%" width="100%;" style="border-radius:10px; border-bottom-left-radius: 35px;"></img><label style="color:white">Lomo</label></button>
+<button class="btn_effect" style="float:left;margin-left:10px;margin-right:7px;margin-top:20px;"onclick="cla()"><img src="image/i2.png" height="100%" width="100%;" style="border-radius:10px; border-bottom-left-radius: 35px;"></img><label style="color:white">Clarity</label></button>
+<button class="btn_effect" style="margin-top:20px;"onclick="sin()"><img src="image/i3.png" height="100%" width="100%;" style="border-radius:10px; border-bottom-left-radius: 35px;"></img><label style="color:white">Sin City</label></button>
+<button class="btn_effect" style="float:left;margin-left:10px;margin-right:7px;margin-top:20px;"onclick="cro()"><img src="image/i4.png" height="100%" width="100%;" style="border-radius:10px; border-bottom-left-radius: 35px;"></img><label style="color:white">Cross Process</label></button>
+<button class="btn_effect" style="margin-top:20px;"onclick="pin()"><img src="image/i5.png" height="100%" width="100%;" style="border-radius:10px; border-bottom-left-radius: 35px;"></img><label style="color:white">Pinhole</label></button>
+<button class="btn_effect" style="float:left;margin-left:10px;margin-right:7px;margin-top:20px;"onclick="nos()"><img src="image/i6.png" height="100%" width="100%;" style="border-radius:10px; border-bottom-left-radius: 35px;"></img><label style="color:white">Nostalgia</label></button>
+<button class="btn_effect" style="margin-top:20px;"onclick="her()"><img src="image/i7.png" height="100%" width="100%;" style="border-radius:10px; border-bottom-left-radius: 35px;"></img><label style="color:white">Her Majesty</label></button>
+<button class="btn_effect" style="float:left;margin-left:10px;margin-right:7px;margin-top:20px;"onclick="sun()"><img src="image/i8.png" height="100%" width="100%;" style="border-radius:10px; border-bottom-left-radius: 35px;"></img><label style="color:white">SunRise</label></button>
+<button class="btn_effect" style="margin-top:20px;"onclick="ora()"><img src="image/i9.png" height="100%" width="100%;" style="border-radius:10px; border-bottom-left-radius: 35px;"></img><label style="color:white">Orange Peel</label></button>
+<button class="btn_effect" style="float:left;margin-left:10px;margin-right:7px;margin-top:20px;"onclick="lov()"><img src="image/i10.png" height="100%" width="100%;" style="border-radius:10px; border-bottom-left-radius: 35px;"></img><label style="color:white">Love</label></button>
+<button class="btn_effect" style="margin-top:20px;" onclick="gru()"><img src="image/i11.png" height="100%" width="100%;" style="border-radius:10px; border-bottom-left-radius: 35px;"></img><label style="color:white">Grungy</label></button>
+<button class="btn_effect" style="float:left;margin-left:10px;margin-right:7px;margin-top:20px;" onclick="jar()"><img src="image/i12.png" height="100%" width="100%;" style="border-radius:10px; border-bottom-left-radius: 35px;"></img><label style="color:white">Jarques</label></button>
+<button class="btn_effect" style="margin-top:20px;"onclick="glo()"><img src="image/i13.png" height="100%" width="100%;" style="border-radius:10px; border-bottom-left-radius: 35px;"></img><label style="color:white">Glowing Sun</label></button>
+<button class="btn_effect" style="float:left;margin-left:10px;margin-right:7px;margin-top:20px;"onclick="haz()"><img src="image/i14.png" height="100%" width="100%;" style="border-radius:10px; border-bottom-left-radius: 35px;"></img><label style="color:white">Hazy Days</label></button>
+<button class="btn_effect" style="margin-top:20px;" onclick="vin()"><img src="image/i15.png" height="100%" width="100%;" style="border-radius:10px; border-bottom-left-radius: 35px;"></img><label style="color:white">Vintage</label></button>
+
+</div>
+<button class="btn52" style="margin-left:20px;"onclick="revert()">CLOSE</button>
+<button class="btn51" onclick="save()">APPLY</button>
+</div>
+<div class="c2" id="id5"style="">
+<button class="btn3" onclick="hidemenu()" style="margin-left:90%;margin-top:2px;margin-bottom:4px;" ><i class="fas fa-times" ></i>
+</button>
+<img src="image/c.jpg" height="1%" width="100%" style="margin-left:0%;"></img>
+<label class="effect_name" style="margin-left:35%;" >FONT</label>
+<div style="height:72%;width:100%;overflow-y:scroll;" >
+<div class="addtext"><button class="text" onclick="Addtext()"><img src="image/textadd.png" height="90%" width="90%;"></button></img>
+<div><label style="font-family:sans;color:rgb(150,150,150);margin-top:7%;font-size:110%;">Add new text</label></div></div>
+   <label style="color:rgb(200,200,200);font-family:sans;margin-top:10%;margin-left:5%;">Font</label>
+
+ <div style="margin-left:10%">  
+<button class="btn" style="font-family:arial;width:90%;" ondblclick="fonttype()" id="b">Arial</button>
+</div>
+<div>
+<label style="color:rgb(200,200,200);font-family:sans;margin-top:10%;margin-left:5%;">Align & Case</label>
+</div>
+<div>
+<button style="height:8% ;width:18%; border-radius:50%;background-color:transparent;margin-left:5%;float:left;" id="underline"><i class="fas fa-Underline" style="color:white;"></i></button>
+<button style="height:8% ;width:18%; border-radius:50%;background-color:transparent;margin-left:5%;float:left;" id="italic"><i class="fas fa-Italic" style="color:white;"></i></button>
+<button style="height:8% ;width:18%; border-radius:50%;background-color:transparent;margin-left:5%;" id="bold"><i class="fas fa-Bold" style="color:white;"></i></button>
+
+</div>
+<label style="color:rgb(200,200,200);font-family:sans;margin-top:10%;margin-left:5%;">Color</label>
+  <div> <input type="color" id="text-color" name="body" value="#ffffff" style="margin-left:5%;"  ></input><input type="color" id="text-color1" name="body" value="#f6b73c" style="margin-left:2%;">
+  <input type="color" id="text-color2" name="body" value="#e66465" style="margin-left:2%;">
+  <input type="color" id="text-color3" name="body" value="#74A86F" style="margin-left:2%;">
+   <input type="color" id="text-color4" name="body" value="#606060" style="margin-left:5%;margin-top:2%;">
+   <input type="color" id="text-color5" name="body" value="#8ACCFF" style="margin-left:1%;margin-top:2%;">
+   </div>
+
+
+  <label style="margin-left:5%;margin-top:5%;font-family: Open Sans;font-size:15px;color:white">Font size </label>
+<input type="range" min="0" max="100" value="50" class="range blue" id="font-size"/>
+<label style="margin-left:5%;margin-top:5%;font-family: Open Sans;font-size:15px;color:white">Stroke Width</label>
+
+<input type="range" min="0" max="5" value="0" class="range blue" id="stroke"/>
+<label style="color:rgb(200,200,200);font-family:sans;margin-top:10%;margin-left:5%;">Stroke Color</label>
+  <div> <input type="color" id="color" name="body" value="#ffffff" style="margin-left:5%;"><input type="color" id="color1" name="body" value="#f6b73c" style="margin-left:2%;">
+  <input type="color" id="color2" name="body" value="#e66465" style="margin-left:2%;">
+  <input type="color" id="color3" name="body" value="#74A86F" style="margin-left:2%;">
+   <input type="color" id="color4" name="body" value="#606060" style="margin-left:5%;margin-top:2%;">
+   <input type="color" id="color5" name="body" value="#8ACCFF" style="margin-left:1%;margin-top:2%;">
+   </div>
+   </div>
+   <button class="btn52" style="margin-left:20px;"onclick="closefont()">CLOSE</button>
+<button class="btn51" onclick="save()">APPLY</button>
+   </div>
+<div class=" c3" style="border:0px;" id="c3">
+<div class="img_con d-flex justify-content-center align-items-center " id="add_div">
+<div id="main_upload_button"><input type="file" style="color:white;background-color:transparent;display:none;" id="uploadbutton"><label for="uploadbutton" style="color:rgb(200,200,200);font-size:100px;" ><i class="fas fa-upload" style="cursor:pointer;"></i></label>
+<h4>UPLOAD IMAGE</h4></div>
+<img src="image/img4.jpg" height="80%" width="80%" style="display:none;" id="main_image" ></img>
+<canvas style="display:none" id="canvas_editing"></canvas>
+<div id="divid" style="display:none"><canvas  id="canvas_font"></canvas></div>
+</div>
+
+</div>
+<div class="c4" >
+<label  class="navi_text"><u><pre class="navi_text">Navigat   </pre></u></label>
+<div  style="display:none" id="navi_hide">
+<div class="navi d-flex justify-content-center align-items-center ">
+<img src="image/img4.jpg" height="80%" width="100%" id="navigate_img" ></img>
+</div>
+</div>
+<div class="ad">
+
+<img src="image/img1.jpg" height="100%" width="100%" ></img>
+</div>
+</div>
+
+</div>
+
+<div class="button2">
+
+
+<div class="button"><div class="float close f1" style="visibility:hidden;"><i class="fas fa-times " style="font-size:140%;margin-top:8px;margin-right:10px;"></i><div class="dropdown-content5">
+  
+  <label style="font-family:sans;text-align:center;">CLOSE</label>
+ 
+  </div></div>
+<button class="btn1 float" style="width:8%;height:70%;margin-left:40%;margin-top:8px;font-size:80%;text-align:center"><i class="fas fa-times" style="margin-right:5%;"></i> CLOSE</button>
+<a  href="" id="alink" class="btn float" style="width:12%;height:70%; margin-left:1%;margin-top:8px;font-size:80%;color:white" download><i class="fa fa-download" style="margin-right:5%;"></i> DOWNLOAD</a></div>
+
+</div>
+</div>
+
+ </body>
+ <script src="JavaScript/main.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.full.min.js"></script>
+	<script>
+
+</script>
+ </html>
